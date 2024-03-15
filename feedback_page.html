@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #d7bde2; /* Lavender color */
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #e74c3c; /* Red color for the heading */
+        }
+
+        #details-form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+            color: #333; /* Text color */
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #e74c3c; /* Red color for the button */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>STUDENTS DETAILS</h2>
+    <div id="details-form">
+        <form action="process_details.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="roll">Roll Number:</label>
+            <input type="text" id="roll" name="roll" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="B.TECH AI&DS">B.TECH AI&DS</option>
+                <option value="B.TECH CSBS">B.TECH CSBS</option>
+                <option value="B.TECH IT">B.TECH IT</option>
+                <option value="BE CSE">BE CSE</option>
+                <option value="BE MECH">BE MECH</option>
+                <option value="BE ECE">BE ECE</option>
+            </select>
+
+            <label for="section">Section:</label>
+            <select id="section" name="section" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select>
+
+            <label for="year">Year of Studying:</label>
+            <select id="year" name="year" required>
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+            </select>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

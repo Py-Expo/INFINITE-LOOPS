@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Category Selection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #category-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-item {
+            width: 45%;
+            margin: 10px;
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            background-color: #3498db;
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .category-item:nth-child(even) {
+            background-color: #2ecc71;
+        }
+
+        .category-item:hover {
+            background-color: rgba(52, 152, 219, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h2>Select Feedback Category</h2>
+    <ul id="category-list">
+        <li class="category-item" onclick="redirectToFeedback('TRANSPORT')">TRANSPORT</li>
+        <li class="category-item" onclick="redirectToFeedback('HOSTEL')">HOSTEL</li>
+        <li class="category-item" onclick="redirectToFeedback('EDUCATION')">EDUCATION</li>
+        <li class="category-item" onclick="redirectToFeedback('CANTEEN')">CANTEEN</li>
+        <li class="category-item" onclick="redirectToFeedback('AUDITORIUM')">AUDITORIUM</li>
+        <li class="category-item" onclick="redirectToFeedback('LIBRARY')">LIBRARY</li>
+        <li class="category-item" onclick="redirectToFeedback('PLACEMENT')">PLACEMENT</li>
+        <li class="category-item" onclick="redirectToFeedback('SPORTS')">SPORTS</li>
+        <!-- Add more categories as needed -->
+    </ul>
+
+    <script>
+        function redirectToFeedback(category) {
+            // You can redirect to the feedback page for the selected category
+            // Here, I'm using a placeholder URL. Replace it with the actual URL of your feedback page.
+            window.location.href = 'feedback_page.html?category=' + category;
+        }
+    </script>
+</body>
+</html>
